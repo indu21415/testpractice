@@ -1,0 +1,13 @@
+# least number of marks total
+
+import csv
+with open('C:/Users/yalla/OneDrive/Desktop/test_practice/testpractice/assignment.py/student_marks.csv') as csvfile:
+    data = csv.DictReader(csvfile)
+    total_marks = {}
+    for records in data:
+        marks = (int(records['Telugu']), int(records['English']), int(records['Maths']), int(records['Physics']), 
+                 int(records['Chemistry']), int(records['Social']))
+        total = sum(marks)
+        total_marks[records['studentname']] = total
+    students = sorted(total_marks.items(), key=lambda x: x[1])
+print(f"The Student is {students[0][0]} and his Least mark is {students[0][1]}") 
