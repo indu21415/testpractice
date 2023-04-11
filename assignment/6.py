@@ -1,7 +1,8 @@
 # average mark of each subject ignoring failure
 
-
 import csv
+
+
 telugu_sum = 0; telugu_count = 0
 english_sum = 0; english_count = 0
 maths_sum = 0; maths_count = 0
@@ -13,7 +14,7 @@ pass_mark = 40
 
 avg_marks = {}
 
-with open('C:/Users/yalla/OneDrive/Desktop/test_practice/testpractice/assignment.py/student_marks.csv','r') as csvfile:
+with open('testpractice/assignment/student_marks.csv','r') as csvfile:
     data = csv.DictReader(csvfile)
     for record in data:
         if int(record['Telugu']) >= pass_mark:
@@ -21,7 +22,7 @@ with open('C:/Users/yalla/OneDrive/Desktop/test_practice/testpractice/assignment
             telugu_count += 1
         if int(record['English']) >= pass_mark:
             english_sum += int(record['English'])
-            english_count += 1,
+            english_count += 1
         if int(record['Maths']) >= pass_mark:
             maths_sum += int(record['Maths'])
             maths_count += 1

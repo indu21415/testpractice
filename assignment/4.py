@@ -1,13 +1,8 @@
-# topp student with maximun total
+# top student with maximun total
 
-#import pandas as indu
-
-# data = indu.read_csv(r'student_marks.csv')
-# marks = data.max()
-# print(f"the maximum total student is \"student\" with marks \n{marks}")
 import csv
 
-with open('C:/Users/yalla/OneDrive/Desktop/test_practice/testpractice/assignment.py/student_marks.csv') as csvfile:
+with open('testpractice/assignment/student_marks.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     total_marks = {}
     for row in reader:

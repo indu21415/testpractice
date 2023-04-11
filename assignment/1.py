@@ -1,4 +1,8 @@
+# find the faculty with highest pass percentage(>40)
+
 import csv
+
+
 Telugu = 0
 English = 0
 Maths = 0
@@ -15,7 +19,7 @@ faculty = {
     'Chemistry':'Ravi'
 }
 fac = {}
-with open('C:/Users/yalla/OneDrive/Desktop/test_practice/testpractice/assignment.py/student_marks.csv','r') as file:
+with open('testpractice/assignment/student_marks.csv','r') as file:
     data = csv.DictReader(file)
     for record in data:
         if int(record['Telugu'])>=90:
